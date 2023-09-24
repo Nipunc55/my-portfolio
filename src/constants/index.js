@@ -130,19 +130,7 @@ const experiences = [
 			'Participating in code reviews and providing constructive feedback to other developers.',
 		],
 	},
-	{
-		title: 'React Native Developer',
-		company_name: 'Tesla',
-		icon: tesla,
-		iconBg: '#E6DEDD',
-		date: 'Jan 2021 - Feb 2022',
-		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
-		],
-	},
+
 	{
 		title: 'Web Developer',
 		company_name: 'Shopify',
@@ -157,16 +145,14 @@ const experiences = [
 		],
 	},
 	{
-		title: 'Full stack Developer',
-		company_name: 'Meta',
+		title: 'FreeLance Game Developer',
+		company_name: 'FIVER',
 		icon: meta,
 		iconBg: '#E6DEDD',
-		date: 'Jan 2023 - Present',
+		date: 'Jul 2020 - Jan 2022',
 		points: [
-			'Developing and maintaining web applications using React.js and other related technologies.',
-			'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-			'Implementing responsive design and ensuring cross-browser compatibility.',
-			'Participating in code reviews and providing constructive feedback to other developers.',
+			'Developing mobile and web games using Unity game engine.',
+			'Deploy develop games to play store and web.',
 		],
 	},
 ];
