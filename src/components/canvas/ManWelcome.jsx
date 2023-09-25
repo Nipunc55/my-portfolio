@@ -1,20 +1,49 @@
 /** @format */
 
-import React, { Suspense, useEffect, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { Suspense, useEffect, useState, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-
+import * as THREE from 'three';
 import CanvasLoader from '../Loader';
 
-const Computers = ({ isMobile }) => {
-	const computer = useGLTF('./desktop_pc/iphone.gltf');
+const Man = ({ isMobile }) => {
+	const man = useGLTF('./desktop_pc/office_man.gltf');
 
+	let mixer;
+
+	useEffect(() => {
+		if (man.animations.length) {
+			mixer = new THREE.AnimationMixer(man.scene);
+			const action = mixer.clipAction(man.animations[0]);
+			// action.loop = THREE.LoopRepeat;
+			action.play();
+			// action.halt(5);
+			// man.animations.forEach((clip) => {
+			// 	// const action = mixer.clipAction(clip)
+			// 	console.log(clip);
+			// 	// action.play();
+
+			// 	// action.halt(props.aniamtionDuration)
+			// });
+		}
+
+		return () => {
+			// Clean up the animation mixer when the component unmounts
+			mixer.stopAllAction();
+		};
+	}, []);
+	useFrame((state, delta) => {
+		// console.log('use Frame');
+		if (mixer) {
+			mixer.update(delta);
+		}
+	});
 	return (
 		<mesh>
 			<hemisphereLight intensity={0.15} groundColor='black' />
 			<spotLight
-				position={[-20, 50, 10]}
-				angle={0.12}
+				position={[-10, 60, 10]}
+				angle={1}
 				penumbra={1}
 				intensity={1}
 				castShadow
@@ -22,16 +51,16 @@ const Computers = ({ isMobile }) => {
 			/>
 			<pointLight intensity={1} />
 			<primitive
-				object={computer.scene}
-				scale={isMobile ? 0.7 : 2}
-				position={isMobile ? [0, -3, -2.2] : [0, -2, 0]}
-				rotation={[0, 0, 0]}
+				object={man.scene}
+				scale={isMobile ? 0.7 : 1}
+				position={isMobile ? [0, -3, -2.2] : [1, -4, -5]}
+				rotation={[0, Math.PI / 3, 0]}
 			/>
 		</mesh>
 	);
 };
 
-const ComputersCanvas = () => {
+const ManWelcome = () => {
 	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
@@ -61,18 +90,18 @@ const ComputersCanvas = () => {
 				<></>
 			) : (
 				<Canvas
-					frameloop='demand'
+					// frameloop='demand'
 					shadows
 					dpr={[1, 2]}
 					camera={{ position: [20, 3, 5], fov: 25 }}
 					gl={{ preserveDrawingBuffer: true }}>
 					<Suspense fallback={<CanvasLoader />}>
-						<OrbitControls
+						{/* <OrbitControls
 							enableZoom={false}
 							maxPolarAngle={Math.PI / 2}
 							minPolarAngle={Math.PI / 2}
-						/>
-						<Computers isMobile={isMobile} />
+						/> */}
+						<Man isMobile={isMobile} />
 					</Suspense>
 					<Preload all />
 				</Canvas>
@@ -81,4 +110,4 @@ const ComputersCanvas = () => {
 	);
 };
 
-export default ComputersCanvas;
+export default ManWelcome;

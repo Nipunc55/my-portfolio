@@ -49,7 +49,7 @@ const services = [
 		icon: web,
 	},
 	{
-		title: 'React Native Developer',
+		title: 'Game Developer',
 		icon: mobile,
 	},
 	{
@@ -57,7 +57,7 @@ const services = [
 		icon: backend,
 	},
 	{
-		title: 'Content Creator',
+		title: 'Mobile App Developer',
 		icon: creator,
 	},
 ];
@@ -75,21 +75,13 @@ const technologies = [
 		name: 'JavaScript',
 		icon: javascript,
 	},
-	{
-		name: 'TypeScript',
-		icon: typescript,
-	},
+	// {
+	// 	name: 'TypeScript',
+	// 	icon: typescript,
+	// },
 	{
 		name: 'React JS',
 		icon: reactjs,
-	},
-	{
-		name: 'Redux Toolkit',
-		icon: redux,
-	},
-	{
-		name: 'Tailwind CSS',
-		icon: tailwind,
 	},
 	{
 		name: 'Node JS',
@@ -99,14 +91,23 @@ const technologies = [
 		name: 'MongoDB',
 		icon: mongodb,
 	},
+	// {
+	// 	name: 'Redux Toolkit',
+	// 	icon: redux,
+	// },
+	// {
+	// 	name: 'Tailwind CSS',
+	// 	icon: tailwind,
+	// },
+
 	{
 		name: 'Three JS',
 		icon: threejs,
 	},
-	{
-		name: 'git',
-		icon: git,
-	},
+	// {
+	// 	name: 'git',
+	// 	icon: git,
+	// },
 	// {
 	//   name: "figma",
 	//   icon: figma,
