@@ -7,7 +7,7 @@ import * as THREE from 'three';
 import CanvasLoader from '../Loader';
 
 const Man = ({ isMobile }) => {
-	const man = useGLTF('./desktop_pc/office_man.gltf');
+	const man = useGLTF('./desktop_pc/office_man_1.gltf');
 
 	let mixer;
 
@@ -17,17 +17,26 @@ const Man = ({ isMobile }) => {
 			const action = mixer.clipAction(man.animations[0]);
 			// action.loop = THREE.LoopRepeat;
 			action.play();
-			// action.halt(5);
-			// man.animations.forEach((clip) => {
-			// 	// const action = mixer.clipAction(clip)
-			// 	console.log(clip);
-			// 	// action.play();
+			// console.log(action);
+			action.halt(6);
 
-			// 	// action.halt(props.aniamtionDuration)
-			// });
+			// setTimeout(() => {
+			// 	const _action = mixer.clipAction(man.animations[1]);
+			// 	action.play();
+			// }, 6000);
+			man.animations.forEach((clip) => {
+				const action = mixer.clipAction(clip);
+				console.log(clip.name);
+
+				//
+				// if (clip.name == 'idle') console.log(clip.name);
+				// action.play();
+				// action.play();
+			});
 		}
 
 		return () => {
+			console.log('component unmount');
 			// Clean up the animation mixer when the component unmounts
 			mixer.stopAllAction();
 		};

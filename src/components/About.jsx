@@ -9,6 +9,7 @@ import { styles } from '../styles';
 import { services } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
+import { ComputersCanvas } from './canvas';
 
 const ServiceCard = ({ index, title, icon }) => (
 	<Tilt className='xs:w-[250px] w-full'>
@@ -22,6 +23,7 @@ const ServiceCard = ({ index, title, icon }) => (
 					speed: 450,
 				}}
 				className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
+				{/* <ComputersCanvas /> */}
 				<img
 					src={icon}
 					alt='web-development'
@@ -50,12 +52,15 @@ const About = () => {
 				I'm a software engineer with a passion for learning new technologies,
 				building applications , and providing services.
 			</motion.p>
+			{/* <ComputersCanvas /> */}
 
-			<div className='mt-20 flex flex-wrap gap-10'>
+			{/* <div className=' flex flex-wrap gap-10'>
 				{services.map((service, index) => (
-					<ServiceCard key={service.title} index={index} {...service} />
+					<div className='w-50 h-50 object-contain'></div>
+					// <ServiceCard key={service.title} index={index} {...service} />
+					// <ComputersCanvas />
 				))}
-			</div>
+			</div> */}
 		</>
 	);
 };

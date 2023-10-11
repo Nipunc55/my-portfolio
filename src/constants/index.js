@@ -1,6 +1,7 @@
 /** @format */
 
 import {
+	laravel,
 	mobile,
 	backend,
 	creator,
@@ -37,10 +38,10 @@ export const navLinks = [
 		id: 'work',
 		title: 'Work',
 	},
-	{
-		id: 'projects',
-		title: 'Projects',
-	},
+	// {
+	// 	id: 'projects',
+	// 	title: 'Projects',
+	// },
 ];
 
 const services = [
@@ -91,31 +92,24 @@ const technologies = [
 		name: 'MongoDB',
 		icon: mongodb,
 	},
-	// {
-	// 	name: 'Redux Toolkit',
-	// 	icon: redux,
-	// },
-	// {
-	// 	name: 'Tailwind CSS',
-	// 	icon: tailwind,
-	// },
+	{
+		name: 'Laravel',
+		icon: laravel,
+	},
 
 	{
 		name: 'Three JS',
 		icon: threejs,
 	},
-	// {
-	// 	name: 'git',
-	// 	icon: git,
-	// },
-	// {
-	//   name: "figma",
-	//   icon: figma,
-	// },
-	// {
-	//   name: "docker",
-	//   icon: docker,
-	// },
+	{
+		name: 'git',
+		icon: git,
+	},
+
+	{
+		name: 'docker',
+		icon: docker,
+	},
 ];
 
 const experiences = [
