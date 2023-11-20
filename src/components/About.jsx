@@ -50,7 +50,8 @@ const About = () => {
 				variants={fadeIn('', '', 0.1, 1)}
 				className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
 				I'm a software engineer with a passion for learning new technologies,
-				building applications , and providing services.
+				building applications , and providing services. Here are my expert
+				technologies
 			</motion.p>
 			{/* <ComputersCanvas /> */}
 
