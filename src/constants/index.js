@@ -198,7 +198,7 @@ const projects = [
       },
     ],
     image: real_tuk_racing,
-    source_code_link: "https://github.com/Nipunc55",
+    source_code_link: "https://www.youtube.com/watch?v=148Byz38_jM",
   },
   {
     name: "3D Fashion",
