@@ -33,6 +33,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import cricket from "./cricket.png";
+import play_list_master from "./play_list_master.png";
 export {
   logo,
   backend,
@@ -65,5 +66,6 @@ export {
   tripguide,
   laravel,
   real_tuk_racing,
+  play_list_master,
   cricket,
 };

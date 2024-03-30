@@ -29,6 +29,7 @@ import {
   tripguide,
   threejs,
   cricket,
+  play_list_master,
 } from "../assets";
 
 export const navLinks = [
@@ -239,6 +240,28 @@ const projects = [
       },
       {
         name: "Android Studio",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: cricket,
+    source_code_link:
+      "https://play.google.com/store/apps/details?id=com.cricket.sample&pli=1",
+  },
+  {
+    name: "Playlist Master",
+    description:
+      "Platforma where users can share the best you tube videos they saw in you tube regarding any field, and create courses using them. Developed usig Next JS and deployed to vcercel and used planet scale for database",
+    tags: [
+      {
+        name: "NextJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Mysql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TailWind",
         color: "pink-text-gradient",
       },
     ],
