@@ -222,7 +222,7 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/Nipunc55/",
+    source_code_link: "https://playful-frangollo-62e55c.netlify.app/",
   },
   {
     name: "Cricket App",
@@ -243,7 +243,8 @@ const projects = [
       },
     ],
     image: cricket,
-    source_code_link: "https://github.com/Nipunc55",
+    source_code_link:
+      "https://play.google.com/store/apps/details?id=com.cricket.sample&pli=1",
   },
 ];
 
