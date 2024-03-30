@@ -226,28 +226,6 @@ const projects = [
     source_code_link: "https://playful-frangollo-62e55c.netlify.app/",
   },
   {
-    name: "Cricket App",
-    description:
-      "Android app that user can gain points by gussing the scores. Used fibase and third party apis for getting score.",
-    tags: [
-      {
-        name: "Java",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Android Studio",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: cricket,
-    source_code_link:
-      "https://play.google.com/store/apps/details?id=com.cricket.sample&pli=1",
-  },
-  {
     name: "Playlist Master",
     description:
       "Platforma where users can share the best you tube videos they saw in you tube regarding any field, and create courses using them. Developed usig Next JS and deployed to vcercel and used planet scale for database",
@@ -262,6 +240,27 @@ const projects = [
       },
       {
         name: "TailWind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: play_list_master,
+    source_code_link: "https://playlist-masters.vercel.app/",
+  },
+  {
+    name: "Cricket App",
+    description:
+      "Android app that user can gain points by gussing the scores. Used fibase and third party apis for getting score.",
+    tags: [
+      {
+        name: "Java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Android Studio",
         color: "pink-text-gradient",
       },
     ],
