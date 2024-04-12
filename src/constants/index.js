@@ -234,31 +234,31 @@ const projects = [
     image: jobit,
     live_link: "https://playful-frangollo-62e55c.netlify.app/",
   },
-  {
-    name: "Game Hub",
-    description:
-      "Discover optimized games on our browser-based platform. Enjoy hassle-free gaming, no downloads needed. Click to start playing",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "react-three-fiber",
-        color: "green-text-gradient",
-      },
-      {
-        name: "webgl",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "unity",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    live_link: "https://playful-frangollo-62e55c.netlify.app/",
-  },
+  // {
+  //   name: "Game Hub",
+  //   description:
+  //     "Discover optimized games on our browser-based platform. Enjoy hassle-free gaming, no downloads needed. Click to start playing",
+  //   tags: [
+  //     {
+  //       name: "react",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "react-three-fiber",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "webgl",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "unity",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: jobit,
+  //   live_link: "https://playful-frangollo-62e55c.netlify.app/",
+  // },
   {
     name: "Playlist Master",
     description:
@@ -278,8 +278,8 @@ const projects = [
       },
     ],
     image: play_list_master,
-    source_code_link: "",
-    live_link: "https://playlist-masters.vercel.app/",
+    source_code_link: "https://github.com/Nipunc55/youtube-playlist",
+    // live_link: "https://playlist-masters.vercel.app/",
   },
   {
     name: "Cricket App",
