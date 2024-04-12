@@ -28,12 +28,14 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import B from "./company/B.png";
-
+import youtube from "./youtube.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import cricket from "./cricket.png";
 import play_list_master from "./play_list_master.png";
+import playstore from "./playstore.png";
+import web_link from "./web_link.png";
 export {
   logo,
   backend,
@@ -68,4 +70,7 @@ export {
   real_tuk_racing,
   play_list_master,
   cricket,
+  playstore,
+  youtube,
+  web_link,
 };

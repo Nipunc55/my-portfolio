@@ -6,19 +6,19 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import CanvasLoader from "../Loader";
 
-const Man = ({ isMobile }) => {
+const Man = ({ isMobile, clicked }) => {
   const man = useGLTF("./desktop_pc/office_man_1.gltf");
 
   let mixer;
-
+  useEffect(() => {}, [clicked]);
   useEffect(() => {
     if (man.animations.length) {
       mixer = new THREE.AnimationMixer(man.scene);
       const action = mixer.clipAction(man.animations[0]);
       // action.loop = THREE.LoopRepeat;
-      action.play();
+      // action.play();
       // console.log(action);
-      action.halt(6);
+      // action.halt(6);
 
       // setTimeout(() => {
       // 	const _action = mixer.clipAction(man.animations[1]);
@@ -26,24 +26,26 @@ const Man = ({ isMobile }) => {
       // }, 6000);
       man.animations.forEach((clip) => {
         const action = mixer.clipAction(clip);
-        console.log(clip.name);
 
         //
-        // if (clip.name == 'idle') console.log(clip.name);
-        // action.play();
-        // action.play();
+        if (clip.name == "salute") {
+          action.setLoop(1, 1);
+        }
+        action.play();
+        // console.log(action);
       });
     }
 
     return () => {
-      console.log("component unmount");
+      // console.log("component unmount");
       // Clean up the animation mixer when the component unmounts
       mixer.stopAllAction();
     };
-  }, []);
+  }, [man, clicked]);
+
   useFrame((state, delta) => {
-    // console.log('use Frame');
     if (mixer) {
+      // console.log("use frame");
       mixer.update(delta);
     }
   });
@@ -62,7 +64,8 @@ const Man = ({ isMobile }) => {
       <primitive
         object={man.scene}
         scale={isMobile ? 0.7 : 1}
-        position={isMobile ? [0, -3, -2.2] : [1, -4, -5]}
+        // position={isMobile ? [-3, -3, -2.2] : [1, -4, -5]}
+        position={isMobile ? [-10, -8, -1] : [1, -4, -5]}
         rotation={[0, Math.PI / 3, 0]}
       />
     </mesh>
@@ -71,7 +74,12 @@ const Man = ({ isMobile }) => {
 
 const ManWelcome = () => {
   const [isMobile, setIsMobile] = useState(false);
-
+  const [clicked, setClicked] = useState(false);
+  const canvasRef = useRef(null);
+  const handleClick = (event) => {
+    // console.log(event);
+    setClicked((pre) => !pre);
+  };
   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -99,7 +107,10 @@ const ManWelcome = () => {
         <></>
       ) : (
         <Canvas
+          ref={canvasRef}
           // frameloop='demand'
+          onClick={handleClick}
+          onFocus={handleClick}
           shadows
           dpr={[1, 2]}
           camera={{ position: [20, 3, 5], fov: 25 }}
@@ -111,7 +122,7 @@ const ManWelcome = () => {
 							maxPolarAngle={Math.PI / 2}
 							minPolarAngle={Math.PI / 2}
 						/> */}
-            <Man isMobile={isMobile} />
+            <Man isMobile={isMobile} clicked={clicked} />
           </Suspense>
           <Preload all />
         </Canvas>

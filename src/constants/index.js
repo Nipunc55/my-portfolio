@@ -186,7 +186,7 @@ const projects = [
   {
     name: "Real Tuk Racing",
     description:
-      "Mobile game that simulate trishow driving and racing and got 80k downloads in play store.",
+      "Mobile game that simulate trishow driving and racing.Implement Azure backend for score board and user management.Available in plastore and sample scene in web.Feel free to click on above link and enjoy!",
     tags: [
       {
         name: "Unity",
@@ -196,14 +196,23 @@ const projects = [
         name: "C#",
         color: "green-text-gradient",
       },
+      {
+        name: "azure",
+        color: "pink-text-gradient",
+      },
     ],
     image: real_tuk_racing,
-    source_code_link: "https://www.youtube.com/watch?v=148Byz38_jM",
+    source_code_link: "",
+    live_link:
+      "https://game-hub-com.netlify.app/game-loader?gameName=wheelgame&orientation=landscape",
+    youtube_link: "https://www.youtube.com/watch?v=148Byz38_jM",
+    playsotore_link:
+      "https://play.google.com/store/apps/details?id=com.NeedleSack.RealTukRacing",
   },
   {
     name: "3D Fashion",
     description:
-      "Web application that enables fasion desiners to chose color combinations for their cloths. This applications has customizable 3D models",
+      "Designers, explore our web app for easy color combination selection and customizable 3D models for your clothing designs. Elevate your creative process today",
     tags: [
       {
         name: "react",
@@ -223,7 +232,32 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://playful-frangollo-62e55c.netlify.app/",
+    live_link: "https://playful-frangollo-62e55c.netlify.app/",
+  },
+  {
+    name: "Game Hub",
+    description:
+      "Discover optimized games on our browser-based platform. Enjoy hassle-free gaming, no downloads needed. Click to start playing",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react-three-fiber",
+        color: "green-text-gradient",
+      },
+      {
+        name: "webgl",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "unity",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobit,
+    live_link: "https://playful-frangollo-62e55c.netlify.app/",
   },
   {
     name: "Playlist Master",
@@ -244,7 +278,8 @@ const projects = [
       },
     ],
     image: play_list_master,
-    source_code_link: "https://playlist-masters.vercel.app/",
+    source_code_link: "",
+    live_link: "https://playlist-masters.vercel.app/",
   },
   {
     name: "Cricket App",
@@ -265,7 +300,7 @@ const projects = [
       },
     ],
     image: cricket,
-    source_code_link:
+    playsotore_link:
       "https://play.google.com/store/apps/details?id=com.cricket.sample&pli=1",
   },
 ];
